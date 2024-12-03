@@ -1,0 +1,37 @@
+<main class="main-container">
+    <section class="">
+        <div><h2 class="title-form"><%= title %></h2></div>
+        <form action="/api/heroes/nuevo" method="POST" class="form-dark">
+            <div class="space-y-2">
+                <label for="nombreSuperHeroe" class="label-form">Nombre del superhéroe</label>
+                <input type="text" name="nombreSuperHeroe" class="input-form" id="nombreSuperHeroe">
+            </div>
+            <div class="space-y-2">
+                <label for="nombreReal" class="label-form">Nombre real</label>
+                <input type="text" name="nombreReal" class="input-form" id="nombreReal">
+            </div>
+            <div class="space-y-2">
+                <label for="edad" class="label-form">Edad</label>
+                <input type="number" name="edad" class="input-form" id="edad">
+            </div>
+            <div class="space-y-2">
+                <label for="planetaOrigen" class="label-form">Planeta de origen</label>
+                <input type="text" name="planetaOrigen" class="input-form" id="planetaOrigen">
+            </div class="space-y-2">
+            <div class="space-y-2" id="poderes">
+                <label for="poderes" class="label-form">Poderes</label>
+                <div class="flex items-center space-x-4">
+                    <input type="text" name="poderes" class="input-form flex-1" id="poderes">
+                </div>
+            </div>
+            <div class="flex justify-end space-x-2 mt-4">
+                <a href="/api/heroes/dashboard">
+                    <button type="button" class="btn btn-danger btn-sm">Cancelar</button>
+                </a>
+                <div class="space-y-2">
+                    <button type="submit" class="btn btn-primary btn-sm">Aceptar</button>
+                </div>
+            </div>
+        </form>
+    </section>        
+</main>

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reglas base personalizdas */
+@layer base {
+    body {
+        @apply min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200;
+    }
+}
+
+@layer utilities {
+    .main-container {
+        @apply flex-grow container mx-auto p-6;
+    }
+    .section-table {
+        @apply w-full dark:bg-gray-800
+    }
+    .spacing-y-1{
+        @apply my-1;
+    }
+}
+
+@layer components {
+    /*eto es para las tablas*/
+    .table-w-full {
+        @apply w-full border-collapse border border-gray-300 dark:border-gray-700;
+    }
+    .table-w-full thead {
+        @apply bg-gray-200 dark:bg-gray-700;
+    }
+    .table-w-full thead tr th {
+        @apply border border-gray-300 dark:border-gray-700 p-2 text-gray-800 dark:text-gray-300;
+    }
+    .table-w-full tbody tr{
+        @apply bg-white dark:bg-gray-800;
+    }
+    .table-w-full tbody tr td{
+        @apply border border-gray-300 dark:border-gray-700 p-2 text-gray-800 dark:text-gray-300;
+    }
+    /* Botón */
+    .btn {
+        @apply flex items-center;
+    }
+    .btn-xs{ 
+        @apply gap-1 px-2 py-1 m-1 text-xs font-semibold rounded-lg;
+    }
+    .btn-sm{
+        @apply gap-2 px-4 py-2 m-2 text-sm font-semibold rounded-lg shadow-sm;
+    }
+    .btn-primary-dark{
+        @apply border bg-blue-500 text-white hover:bg-blue-600 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700  dark:hover:border-gray-900 transition;
+    }
+    .btn-primary {
+        @apply bg-blue-500 text-white hover:bg-blue-600 transition; 
+    }
+    .btn-danger{
+        @apply bg-red-800 text-white hover:bg-red-700 transition;
+    }
+    .btn-warning {
+        @apply bg-orange-700 text-white hover:bg-orange-600 transition;
+    }
+
+    /* Formularios */
+    .title-form{
+        @apply text-3xl font-bold text-gray-900 dark:text-gray-100 p-4;
+    }
+    .form-dark{
+        @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 p-6 rounded-lg shadow-md space-y-6;
+    }
+    .label-form{
+        @apply block text-sm font-medium;
+    }
+
+    .input-form {
+        @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400;
+    }
+}

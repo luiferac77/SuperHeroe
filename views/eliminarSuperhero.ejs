@@ -1,0 +1,19 @@
+    <main class="main-container">
+        <section>
+                <div><h2 class="title-form">¿Deseas eliminar este superhéroe?</h2></div>
+                <form action="/api/heroes/<%= superheroe._id %>/eliminar" method="POST" class="form-dark">
+                <div>
+                    <p><strong>Nombre del Superhéroe:</strong> <%= superheroe.nombreSuperHeroe %></p>
+                    <p><strong>Nombre real:</strong> <%= superheroe.nombreReal %></p>
+                    <p><strong>Edad:</strong> <%= superheroe.edad %></p>
+                    <p><strong>Planeta de origen:</strong> <%= superheroe.planetaOrigen %></p>
+                </div>
+                <div class="flex justify-end space-x-2 mt-4">
+                <a href="/api/heroes/dashboard">
+                    <button type="button" class="btn btn-primary btn-sm">Cancelar</button>
+                </a>
+                <button type="submit" class="btn btn-danger btn-sm"> Aceptar</button>
+                </div>
+            </form>
+        </section>
+    </main>

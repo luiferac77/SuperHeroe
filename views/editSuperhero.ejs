@@ -1,0 +1,85 @@
+<main class="main-container">
+    <section>
+        <div>
+            <h2 class="title-form">Editar Superhéroe</h2>
+        </div>
+        <form class="form-dark" action="/api/heroes/<%= superheroe._id %>/editar" method="POST">
+            <!-- Nombre del superhéroe -->
+            <div class="space-y-2">
+                <label for="nombreSuperHeroe" class="label-form">Nombre del superhéroe</label>
+                <input 
+                    type="text" 
+                    name="nombreSuperHeroe" 
+                    id="nombreSuperHeroe" 
+                    value="<%= superheroe.nombreSuperHeroe %>" 
+                    class="input-form"
+                    required
+                >
+            </div>
+            
+            <!-- Nombre real -->
+            <div class="space-y-2">
+                <label for="nombreReal" class="label-form">Nombre real</label>
+                <input 
+                    type="text" 
+                    name="nombreReal" 
+                    id="nombreReal" 
+                    value="<%= superheroe.nombreReal %>" 
+                    class="input-form"
+                    required
+                >
+            </div>
+            
+            <!-- Edad -->
+            <div class="space-y-2">
+                <label for="edad" class="label-form">Edad</label>
+                <input 
+                    type="number" 
+                    name="edad" 
+                    id="edad" 
+                    value="<%= superheroe.edad %>" 
+                    class="input-form"
+                    required
+                >
+            </div>
+            
+            <!-- Planeta de origen -->
+            <div class="space-y-2">
+                <label for="planetaOrigen" class="label-form">Planeta de origen</label>
+                <input 
+                    type="text" 
+                    name="planetaOrigen" 
+                    id="planetaOrigen" 
+                    value="<%= superheroe.planetaOrigen %>"
+                    class="input-form"
+                >
+            </div>
+            
+            <!-- Poderes -->
+            <div class="space-y-2" id="poderes">
+                <label for="poderes">Poderes</label>
+                
+                    <div class="poder-container">
+                        <input 
+                            type="text" 
+                            name="poderes" 
+                            id="poderes" 
+                            value="<%= superheroe.poderes.join(', ') %>" 
+                            class="input-form"
+                            required
+                        >
+                    </div>
+                
+            </div>   
+            <!-- Botón de envío -->
+            <div class="flex justify-end space-x-2 mt-4">
+                <a href="/api/heroes/dashboard">
+                    <button type="button" class="btn btn-danger btn-sm">Cancelar</button>
+                </a>
+                <div class="space-y-2">
+                    <button type="submit" class="btn btn-primary btn-sm">Aceptar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</main>
