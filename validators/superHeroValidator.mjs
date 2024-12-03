@@ -10,13 +10,24 @@ export const validarSuperHeroe = [
         .escape()
         .notEmpty().withMessage('El nombre del superheroes es requerido')
         .isLength({min: 3, max:60}).withMessage('El nombre del superheroe debe tener entre 3 y 60 caracteres')
-        .isAlphanummeric('es-ES', {ignore: ' '}).withMessage('El nombre del superhéroe debe ser alfanumérico'), 
+        .custom(value => {
+            if (/^\d+$/.test(value)) {
+                throw new Error('El nombre del superhéroe no puede contener solo números');
+            }
+            return true;
+        }), 
     body('nombreReal')
         .trim()
         .escape()
         .notEmpty().withMessage('El nombre real del superheroe es requerido')
         .isLength({min: 3, max: 60}).withMessage('El nombre real del superheroe de tener entre 3 y 60 caracteres')
-        .isAlphanummeric('es-ES', {ignore: ' '}).withMessage('El nombre real debe ser alfanumérico'), 
+        .isLength({ min: 3, max: 60 }).withMessage('El nombre real del superhéroe debe tener entre 3 y 60 caracteres')
+        .custom(value => {
+            if (/^\d+$/.test(value)) {
+                throw new Error('El nombre real no puede contener solo números');
+            }
+            return true;
+        }), 
     body('edad')
         .trim()
         .escape()
