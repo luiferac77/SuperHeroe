@@ -78,7 +78,7 @@
 
     /* footer */
     .footer-dark{
-        @apply bg-gray-200 dark:bg-gray-900 text-white p-4 flex justify-between container mx-auto;
+        @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-4 flex justify-between container mx-auto;
     }
 
     /*main index*/
@@ -97,7 +97,7 @@
     .main-index-content{
         @apply relative z-10 flex justify-center items-center h-full;
     }
-    
+
     .main-index-button{
         @apply bg-red-500 hover:bg-red-700 text-white text-2xl font-bold py-4 px-8 rounded shadow-lg transition;
     }
